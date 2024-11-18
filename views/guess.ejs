@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>右か左を当てるゲーム</title>
+</head>
+<body>
+    <h1>右か左を当てるゲーム</h1>
+    <p>あなたの選択: <%= guess %></p>
+    <p>正解は: <%= correct %></p>
+    <p>結果: <%= judgement %></p>
+    <p>現在の連続成功回数: <%= streak %></p>
+    <hr>
+    <form action="/guess">
+        <label>
+            <input type="radio" name="guess" value="右" required> 右
+        </label>
+        <label>
+            <input type="radio" name="guess" value="左" required> 左
+        </label>
+        <input type="hidden" name="streak" value="<%= streak %>"> <!-- 連続成功回数を保持 -->
+        <button type="submit">当てる</button>
+    </form>
+</body>
+</html>
