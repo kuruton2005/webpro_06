@@ -1,0 +1,13 @@
+flowchart TD
+    start["フォームを表示"] --> input["ユーザーが星座を選択して送信"]
+    input --> endpoint["/horoscope/result に送信"]
+    endpoint --> random["運勢をランダムに選択"]
+    random --> judge["結果を判定"]
+    judge -->|大吉| daikichi["大吉"]
+    judge -->|中吉| chuukichi["中吉"]
+    judge -->|小吉| shoukichi["小吉"]
+    judge -->|凶| kyou["凶"]
+    daikichi --> result["結果を表示: 星座と運勢"]
+    chuukichi --> result
+    shoukichi --> result
+    kyou --> result

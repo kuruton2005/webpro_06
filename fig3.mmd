@@ -1,0 +1,10 @@
+flowchart TD
+    start["開始"] --> input["ユーザーが手を入力"]
+    input --> cpu["右か左を選択"]
+    cpu --> judge["勝敗の判定"]
+    judge -->|勝ち| win["勝ち"]
+    judge -->|負け| lose["負け"]
+    win --> update["連勝数を更新"]
+    draw --> update
+    lose --> update
+    update --> finish["終了"]
