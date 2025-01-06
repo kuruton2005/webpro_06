@@ -1,0 +1,8 @@
+.task-text {
+    display: inline;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
